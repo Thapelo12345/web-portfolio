@@ -1,0 +1,37 @@
+[
+    {
+        "projectId" : 1,
+        "picUrl": "/project images/Project pic.png",
+        "title": "DEMO STORE",
+        "link": "https://thapelo12345.github.io/demo-store/",
+        "pargraph": "I created a clothing store with React to provide a dynamic and engaging shopping experience for users. React's component-based architecture allowed me to build a responsive and scalable interface, ensuring that customers can easily browse products, filter options, and complete purchases smoothly. By leveraging React, I could focus on optimizing performance, enhancing user interactivity, and integrating modern design elements, all while maintaining flexibility for future updates and growth in the store"
+    },
+    {
+        "projectId": 2,
+        "picUrl": "/project images/Concert1.jpg",
+        "title": "Concert",
+        "link": "/projects/Concert Page/concert.html",
+        "pargraph": "The concert page is the second project after the landing page. I created it so i can see if can design a concert page if a client asked me to design one."
+    },
+    {
+        "projectId": 3,
+        "picUrl": "/project images/calculator.jpg",
+        "title": "calculator",
+        "link": "/projects/Calculator/calculator.html",
+        "pargraph": "This is just a simple calculator app That calculates whatever expression is entered on the screen. I created it so i could improve on my JS skills."
+    },
+    {
+        "projectId": 4,
+        "picUrl": "/project images/Qoute machine image.jpg",
+        "title": "qoute Machine",
+        "link": "https://thapelo12345.github.io/React-Qoute-machine/",
+        "pargraph": "The quote machine is my first react project, Its just a simple app that shows random quotes from famous people. It shows the qoute and the picture of the person who sad the qoute."
+    },
+    {
+        "projectId" : 5,
+        "picUrl": "/project images/React clock.jpg",
+        "title": "CountDown Clock",
+        "link": "https://thapelo12345.github.io/stop-watch-react/",
+        "pargraph": "The count down clock is my second react project. Its a count clock from 25 minutes, you can select from 25 minutes to 1 minute. depending on how long you want it to run."
+    }
+]

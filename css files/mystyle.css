@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');/*skill level fonts*/
+
+:root{
+    --main-theme: darkblue;
+}
+
+body{
+    background-color: black;
+    justify-content: center;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.main-titles{
+    text-align: center;
+    color: white;
+    font-weight: 200;
+}
+
+main{
+    position: relative;
+    width: 100vw;
+    height: 60vh;
+    max-height: 900px;
+}
+
+#skill-label{
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+    font-family: "PT Serif", serif;
+    font-weight: 410;
+    font-style: normal;
+    font-size: 2rem;
+    text-shadow: 1px 0 8px steelblue;
+}
+
+#image-container{
+    position: relative;
+    top: 30%;
+    width: 100%;
+    height: 50%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin: 0;
+}
+
+#slide{
+    position: absolute;
+    width: 5vw;
+    min-width: 70px;
+    height: 9vh;
+    left: 45%;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: rotateWheel 20s linear infinite;
+    z-index: 2;
+}
+
+#slide::before{
+    content: '';
+    position: absolute;
+    top: -83%;
+    left: -110%;
+    background-image: url("../PhotoRoom-20230916_040333 - Copy.png");
+    background-size: cover; 
+    background-position: center;
+    width: calc(100% + 200px);
+    height: calc(100% + 200px);
+    border-radius: 50%;
+    border: .1px solid var(--main-theme);
+    box-shadow: inset 0 0 30px var(--main-theme);
+    -webkit-box-reflect: below 1px linear-gradient(to bottom, rgba(0, 0, 0, 0.1 ), rgba(0, 0, 0, 0.1));
+}
+
+@keyframes rotateWheel {
+    from{transform: perspective(1000px) rotateX(-10deg) rotateY(0deg);}
+    to{transform: perspective(1000px) rotateX(-10deg) rotateY(360deg);}
+}
+
+.skill-container{
+    position: absolute;
+    display: block flex;
+    flex-direction: column;
+    height: 16vh;
+    background: none;
+    inset: 0 0 0 0;
+    transform: rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(22rem);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.skill-names{
+    color: white;
+    text-align: center;
+    font-size: .8rem;
+    margin: 0;
+    padding: 0;
+}
+
+.icon{
+    display: block;
+    border-bottom: .1px solid var(--main-theme);
+    border-left: .1px solid var(--main-theme);
+    border-right: .1px solid var(--main-theme);
+    width: 100%;
+    height: 50%;
+    margin-top: 4%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.percentage-container{
+    position: relative;
+    border: .1px solid var(--main-theme);
+    height: 22%;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    box-shadow: inset 0 0 17px var(--main-theme);
+    -webkit-box-reflect: below 5px linear-gradient(to bottom, rgba(0, 0, 0, 0.1 ), rgba(0, 0, 0, 0.1));
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.percentage-display{
+    color: white;
+    text-align: center;
+    font-size: clamp(.5rem, 2vw, 1rem);
+    stroke-width: .1px;
+    -webkit-text-stroke: .5px;
+    -webkit-text-stroke-width: .2px;
+    -webkit-text-stroke-color: lime;
+    margin-top: 0;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    margin-top: -4%;
+    width: 100%;
+    height: 23vh;
+  
+}
+
+footer h1{
+    text-align: center;
+    text-decoration: underline;
+    color: white;
+    font-size: clamp(.96rem, 2vw, 1.2rem);
+}
+
+footer h5{
+    color: white;
+    font-size: 1rem;
+}
+
+footer ul{
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+footer ul li{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid cadetblue;
+    margin: 2%;
+    border-radius: 10px;
+}

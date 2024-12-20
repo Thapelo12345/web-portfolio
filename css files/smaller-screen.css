@@ -1,0 +1,70 @@
+@media only screen and (min-width: 1024px){
+    #nav-bars-container{
+        position: absolute;
+        top: 3%;
+        left: 2%;
+        display: flex;
+        flex-direction: column;
+        width: 3.4vw;
+        height: 33%;
+    }
+    #bg-nav{
+        flex-direction: column;
+    }
+ 
+    #social-media-nav{
+        flex-direction: column;
+    }
+
+    #social-media-nav a{
+        width: 89%;
+        height: 7vh;
+        margin: 4%;
+        border-radius: 10px;
+    }
+}
+
+@media only screen and (min-width: 950px){
+    #project-name{margin-top: -20%;  }
+    #about-title{margin-top: -18%;}
+    #project-name-and-description{flex-direction: row;}
+    #project-image-container{
+        height: 55vh;
+        width: 50%;
+    }
+    #project-description{
+        margin: 1%;
+        width: 47%;
+    }
+    #what-i-do-list{width: 60%;}
+
+    footer ul{
+        width: 50%;
+        align-self: center;
+    }
+}
+
+@media only screen and (max-width: 946px){
+.project-btns{transform: rotateY(0deg);}
+}
+
+
+@media only screen and (max-width: 802px){
+    .project-btns{margin-left: 0;}
+    .skill-container{transform: rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(15rem);}  
+}
+
+@media only screen and (max-width:766px){
+    #project-name{
+        margin-top: -29%;
+    }
+}
+
+@media only screen and (max-width: 494px){
+    .project-btns{margin-left: 0;}
+    #project-name{
+        margin-top: -60%;
+    }
+}
+
+
