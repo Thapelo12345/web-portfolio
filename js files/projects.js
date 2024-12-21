@@ -3,19 +3,20 @@ function navigatePage(val){
 let crrElement;
 
 if(val === "projects"){
-    $('#page-sliders').css('transform', 'translateX(0)')
+    $('.pages').css('transform', 'translateX(0)')
     crrElement = $('#project-btn')
 }//end of if
+
 else if(val === "about me"){
-    $('#page-sliders').css('transform', 'translateX(-100%)')
+    $('.pages').css('transform', 'translateX(-100%)')
     crrElement = $('#about-btn')
 }//end of else if first
+
 else if(val === "what i do"){
-    $('#page-sliders').css('transform', 'translateX(-200%)')
+    $('.pages').css('transform', 'translateX(-200%)')
     crrElement = $('#do-btn')
 }//end of if else second
 
-// console.log(`This button clicked : ${crrElement}`)
 let idArr = ['#project-btn', '#about-btn', '#do-btn']
 
 idArr.forEach((item)=>{

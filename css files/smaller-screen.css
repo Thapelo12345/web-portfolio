@@ -8,6 +8,7 @@
         width: 3.4vw;
         height: 33%;
     }
+
     #bg-nav{
         flex-direction: column;
     }
@@ -25,18 +26,25 @@
 }
 
 @media only screen and (min-width: 950px){
-    #project-name{margin-top: -20%;  }
-    #about-title{margin-top: -18%;}
-    #project-name-and-description{flex-direction: row;}
+    #project-name-and-description{
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+    }
     #project-image-container{
-        height: 55vh;
-        width: 50%;
+        width: 40%;
+        margin: 1%;
+        height: 50vh;
     }
     #project-description{
+        width: 45%;
         margin: 1%;
-        width: 47%;
     }
-    #what-i-do-list{width: 60%;}
+
+    #what-i-do-list{
+        width: 60%;
+        margin: auto;
+    }
 
     footer ul{
         width: 50%;
@@ -44,27 +52,6 @@
     }
 }
 
-@media only screen and (max-width: 946px){
-.project-btns{transform: rotateY(0deg);}
-}
-
-
 @media only screen and (max-width: 802px){
-    .project-btns{margin-left: 0;}
     .skill-container{transform: rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(15rem);}  
 }
-
-@media only screen and (max-width:766px){
-    #project-name{
-        margin-top: -29%;
-    }
-}
-
-@media only screen and (max-width: 494px){
-    .project-btns{margin-left: 0;}
-    #project-name{
-        margin-top: -60%;
-    }
-}
-
-

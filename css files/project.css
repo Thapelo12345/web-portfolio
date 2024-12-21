@@ -4,6 +4,19 @@
 *{box-sizing: border-box;}
 *::after, *::before{box-sizing: border-box;}
 
+*::-webkit-scrollbar{
+    width: 4px;
+    border-radius: 20px;
+    background-color: black;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: cadetblue;
+    border: none;
+    border-radius: 5px;
+    
+}
+
 #projects{
     width: 100vw;
     margin: 2% 0;
@@ -120,33 +133,32 @@
     border: 2px solid steelblue;
 }
 
-#page-sliders{
-    position: relative;
-    width: 100%;
+#slide-display{
     display: flex;
-    margin: 0;
-    padding: 0;
-    transition: .5s;
-    transition-property: transform;
-    box-sizing: border-box;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100vw;
+    height: 90vh;
+    overflow-x: hidden;
 }
-
 .pages{
-    min-width: 100vw;
-    min-height: 90vh;
-    display: flex;
+    flex: 0 0 100%;
+    transition-duration: .5s;
+    transition-property: transform;
+    transform: translateX(0);
+    width: 100%;
+    height: 100vh;
     margin: 0;
     padding: 0;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
-/* settin gup the first slide */
+/* setting up first page */
 
 #project-name{
     color: white;
+    margin-top: -.3%;
     text-decoration: underline;
+    text-align: center;
     font-size: 2rem;
     font-family: "Noto Serif", serif;
     font-optical-sizing: auto;
@@ -163,8 +175,9 @@
 
 #project-image-container{
     width: 100%;
-    height: 55%;
+    height: 40%;
     border-radius: 10px;
+    border: 1px solid green;
     -webkit-box-reflect: below 6px linear-gradient(to bottom, rgba(0, 0, 0, 0.1 ), rgba(0, 0, 0, 0.1));
 }
 
@@ -172,17 +185,16 @@
     width: 100%;
     height: 100%;
     border-radius: inherit;
+    margin: 0;
 }
 
 #project-description{
     color: white;
     flex-wrap: wrap;
     font-size: clamp(1rem, 2vw, 1.4rem);
+    border: 1px solid lightblue;
     padding: 2%;
-}
-
-#project-link-text{
-    color: white;
+    border-radius: 10px;
 }
 
 #navigate-btns{
@@ -192,6 +204,7 @@
     width: 100%;
     height: 6vh;
     border: none;
+    margin: 0;
 }
 
 .navigation-btns{
@@ -209,7 +222,12 @@
 }
 .navigation-btns:hover{transform: scale(1.1);}
 
-/* setting up second slide */
+#project-link-text{
+    text-align: center;
+    color: white;
+}
+
+/* setting up second page */
 
 #about-title{
     color: white;
@@ -220,17 +238,20 @@
     font-weight: 350;
     font-style: normal;
     font-variation-settings: "wdth" 100;
-  
 }
+
 #about-me{
     border: 1px solid cadetblue;
     width: 89%;
-    margin: 0;
+    height: 70%;
+    margin: auto;
     padding: 0;
     border-radius: 10px;
     background-image: radial-gradient(blue, black);
     box-shadow: inset 0 0 20px cadetblue;
+    overflow-y: auto;
 }
+
 
 #about-me > p{
     color: white;
@@ -239,10 +260,9 @@
     font-size: clamp(.9rem, 2vw, 1.2rem);
 }
 
-/* setting up third slide */
-
 #what-i-do{
     color: white;
+    text-align: center;
     margin: 0;
     font-size: 2rem;
     font-family: "Noto Serif", serif;
@@ -253,11 +273,10 @@
 }
 
 #what-i-do-list{
-    /* border: 1px solid cadetblue; */
     text-align: center;
     list-style: none;
     width: 100%;
-    height: 80%;
+    height: 100%;
     overflow-y: scroll;
     padding: 0;
 }
