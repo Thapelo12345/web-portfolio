@@ -474,6 +474,7 @@ iframe {
 #download-btn{
     color: white;
     font-size: clamp(.7rem, 1vw, 1.5rem);
+    font-weight: 700;
     background-image: linear-gradient(0deg, skyblue, var(--main-theme));
     border: none;
     padding: 1%;
