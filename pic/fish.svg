@@ -1,0 +1,5 @@
+<svg width="300" height="400" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Water with wavy top -->
+  <path d="M0,100 Q75,50 150,100 T300,100 V400 H0 Z" fill="hsl(210, 85%, 40%)" />
+  
+</svg>

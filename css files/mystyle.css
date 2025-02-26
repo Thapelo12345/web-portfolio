@@ -1,51 +1,296 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');/*skill level fonts*/
 
 :root{
-    --main-theme: darkblue;
+    --main-theme: hsl(210, 85%, 40%);
 }
 
 body{
+    position: relative;
     background-color: black;
     justify-content: center;
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
+    width: 100vw;
+    height: 100vh;
     overflow-x: hidden;
     overflow-y: scroll;
+    transition-duration: 3s;
+    scroll-behavior: smooth;
 }
 
-.main-titles{
-    text-align: center;
+#fixed-nav {
+    position: fixed;
+    top: 2%;
+    left: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 45vh;
+    padding: .5%;
+    z-index: 2;
+}
+
+@media only screen and (max-width: 671px){
+    #fixed-nav {
+        display: none;
+    }
+}
+
+#fixed-nav button {
+    border: none;
+    display: flex;
+    flex-direction: row;
     color: white;
-    font-weight: 200;
+    transition-property: color transform;
+    transition-duration: .5s;
+    font-size: 1rem;
+    background: none;
+    padding: 2%;
+    width: 6.5vw;
+    height: 10%;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#fixed-nav button:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 10px blue;
+    justify-content: space-evenly;
+}
+
+#fixed-nav button:hover span{
+    text-decoration: underline;
+    transform: translateX(0);
+}
+#fixed-nav button i {
+    z-index: 1;
+    padding: 2%;
+}
+
+#fixed-nav button span{
+    transition-property: transform;
+    transition-duration: 1s;
+    transform: translateX(-210%);
 }
 
 main{
     position: relative;
-    width: 100vw;
-    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 99vw;
+    height: 85vh;
+    margin-bottom: 8%;
+    padding: 0;
     max-height: 900px;
 }
 
 #skill-label{
-    color: white;
+    position: relative;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--main-theme);
+    word-spacing: -0.1em;
     text-align: center;
-    margin-bottom: 0;
+    font-size: clamp(2.75rem, 4vw, 5rem);
     font-family: "PT Serif", serif;
-    font-weight: 410;
+    font-weight: 700;
     font-style: normal;
-    font-size: 2rem;
-    text-shadow: 1px 0 8px steelblue;
+    margin-bottom: -3%;
+    padding: .5%;
+    box-shadow: inset 0 0 10px var(--main-theme);
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition-property: box-shadow, transform;
+    transition-duration: 1s;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateX(20deg);
+    animation: hideSkill linear;
+    animation-timeline: view();
+    animation-range: entry 5% exit 60%;
 }
 
-#image-container{
+@keyframes hideSkill {
+    from{
+        transform: scale(.5);
+        opacity: .5;
+
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+    
+}
+
+#skill-label:hover {
+    transform: rotateX(0deg);
+    box-shadow: 1px 9px 10px black,
+                1px 10px 30px var(--main-theme),
+                inset 0 0 10px var(--main-theme);
+}
+
+#skill-label::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    transform: translateZ(100%);
+    transition-property: transform;
+    transition-duration: .5s;
+}
+
+#skill-board {
+    position: absolute;
+    left: 77%;
+    top: 10%;
+    width: 23%;
+    height: 74%;
+    background: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 1150px){
+    #skill-board {
+    left: 79%;
+    }
+}
+
+@media only screen and (max-width: 958px){
+    #skill-board {
+        display: none;
+    }
+}
+
+#skill-board h1 {
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    text-decoration: underline;
+}
+#skill-board h2{
+    text-align: center;
+    color: white;
+    font-size: clamp(.6rem, 1vw, 1rem);
+    margin: 0;
+}
+
+#skill-board h2 span {
+    color: lime;
+    text-shadow: 0 0 3px currentColor;
+}
+
+#skill-board ul {
+    list-style: none;
+    width: 98%;
+    height: 90%;
+    padding: 0;
+}
+
+#skill-board ul li {
     position: relative;
-    top: 30%;
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    height: 4.5vh;
+    padding: 2%;
+    margin: 2%;
+    margin-bottom: 3%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 1150px){
+    #skill-board ul li {
+        height: 2vh;
+    }
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    margin: 1%;
+    opacity: .5;
+    background-color: rgba(0, 0, 255, 0.2);
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+    z-index: -1;
+    animation: startSlide 2s alternate infinite;
+}
+
+#skill-board ul li:nth-child(1) div{
+    width: 100%;
+    animation-delay: 0s;
+}
+#skill-board ul li:nth-child(2) div{
+    width: 90%;
+    animation-delay: 0.5s;
+}
+#skill-board ul li:nth-child(3) div{
+    width: 95%;
+    animation-delay: 1s;
+}
+#skill-board ul li:nth-child(4) div{
+    width: 50%;
+    animation-delay: 1.5s;
+}
+#skill-board ul li:nth-child(5) div{
+    width: 80%;
+    animation-delay: 2s;
+}
+#skill-board ul li:nth-child(6) div{
+    width: 60%;
+    animation-delay: 2.5;
+}
+#skill-board ul li:nth-child(7) div{
+    width: 60%;
+    animation-delay: 3s;
+}
+#skill-board ul li:nth-child(8) div{
+    width: 30%;
+    animation-delay: 3.5s;
+}
+#skill-board ul li:nth-child(9) div{
+    width: 70%;
+    animation-delay: 4s;
+}
+
+@keyframes startSlide {
+    from{
+        width: 0;
+    }
+}
+
+#skill-label:hover::before {
+    transform: translateY(8%);
+}
+
+#image-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    top: 10%;
     width: 100%;
     height: 50%;
-    padding-left: 1%;
-    padding-right: 1%;
-    margin: 0;
+    box-sizing: border-box;
+    transform: scale(.3);
+    opacity: .5;
+    animation: transLated linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+@keyframes transLated {
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 #slide{
@@ -53,7 +298,7 @@ main{
     width: 5vw;
     min-width: 70px;
     height: 9vh;
-    left: 45%;
+    align-self: center;
     transform-style: preserve-3d;
     transform: perspective(1000px);
     animation: rotateWheel 20s linear infinite;
@@ -63,16 +308,18 @@ main{
 #slide::before{
     content: '';
     position: absolute;
-    top: -83%;
-    left: -110%;
-    background-image: url("../PhotoRoom-20230916_040333 - Copy.png");
+    top: -100%;
+    left: 0;
+    background-image: url("../pic/mySelf.png");
     background-size: cover; 
     background-position: center;
-    width: calc(100% + 200px);
-    height: calc(100% + 200px);
+    width: 10vw;
+    height: 10vw;
+    min-width: 100px;
+    min-height: 100px;
     border-radius: 50%;
-    border: .1px solid var(--main-theme);
-    box-shadow: inset 0 0 30px var(--main-theme);
+    border: .1px solid cadetblue;
+    box-shadow: inset 0 0 30px cadetblue;
     -webkit-box-reflect: below 1px linear-gradient(to bottom, rgba(0, 0, 0, 0.1 ), rgba(0, 0, 0, 0.1));
 }
 
@@ -81,22 +328,31 @@ main{
     to{transform: perspective(1000px) rotateX(-10deg) rotateY(360deg);}
 }
 
-.skill-container{
+.skill-container {
     position: absolute;
     display: block flex;
     flex-direction: column;
     height: 16vh;
+    width: 4.5vw;
+    min-width: 40px;
     background: none;
     inset: 0 0 0 0;
-    transform: rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(22rem);
+    transform: rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(18rem);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .skill-container {
+    transform: rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(9rem);
+    height: 10vh;
+    }
 }
 
 .skill-names{
     color: white;
     text-align: center;
-    font-size: .8rem;
+    font-size: clamp(.6rem, 1vw, 1.8rem);
     margin: 0;
     padding: 0;
 }
@@ -121,9 +377,9 @@ main{
     overflow: hidden;
     padding: 0;
     box-shadow: inset 0 0 17px var(--main-theme);
-    -webkit-box-reflect: below 5px linear-gradient(to bottom, rgba(0, 0, 0, 0.1 ), rgba(0, 0, 0, 0.1));
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    -webkit-box-reflect: below 5px linear-gradient(to bottom, rgba(0, 0, 0, 0.3 ), rgba(0, 0, 0, 0.3));
 }
 
 .percentage-display{
@@ -137,37 +393,92 @@ main{
     margin-top: 0;
 }
 
-footer{
+footer {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 23vh;
-  
+    width: 100vw;
+    margin: 0;
+    padding: 1%;
 }
 
-footer h1{
+#footer-header {
+    font-size: clamp(1rem, 2vw, 4rem);
     text-align: center;
-    text-decoration: underline;
     color: white;
-    font-size: clamp(.96rem, 2vw, 1.2rem);
+    margin: auto;
 }
 
-footer h5{
-    color: white;
-    font-size: 1rem;
-}
-
-footer ul{
-    list-style: none;
-    padding: 0;
-    width: 100%;
-}
-
-footer ul li{
+#footer-details {
     display: flex;
-    justify-content: center;
-    width: 100%;
-    border: 1px solid cadetblue;
-    margin: 2%;
-    border-radius: 10px;
+    flex-direction: row;
+    gap: 1px;
+    padding: 1%;
+    width: 99vw;
+    height: 35vh;
+}
+
+@media only screen and (max-width: 746px){
+    #footer-details {
+        flex-direction: column;
+        align-items: center;
+        margin: 1.5%;
+    }
+}
+
+iframe {
+    width: 20%;
+    min-width: 400px;
+    height: 98%;
+}
+
+#details {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    padding-left: 10%;
+    width: 80%;
+    height: 98%;
+}
+
+@media only screen and (max-width: 746px) {
+    #details {
+        align-items: center;
+    }
+}
+
+#details h1 {
+    color: white;
+    font-size: clamp(.8rem, 1.4vw, 2rem);
+    width: max-content;
+    height: max-content;
+    padding: .5%;
+    border-radius: 5px;
+    margin-bottom: 1.5%;
+}
+
+#phone {
+    background-color: hotpink;
+}
+#email {
+    background-color: cadetblue;
+}
+
+#download-btn a {
+    text-decoration: none;
+    text-shadow: 1px 0 0 black;
+    color: white;
+    border-radius: 5px;
+}
+
+#download-btn{
+    color: white;
+    font-size: clamp(.7rem, 1vw, 1.5rem);
+    background-image: linear-gradient(0deg, skyblue, var(--main-theme));
+    border: none;
+    padding: 1%;
+    border-radius: 5px;
+    width: max-content;
+    height: max-content;
+    margin: auto;
+    cursor: pointer;
 }
