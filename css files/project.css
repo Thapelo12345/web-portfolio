@@ -352,6 +352,13 @@
     border-radius: 15px;
 }
 
+@media only screen and (max-width: 722px) {
+    #school-image {
+        height: 50%;
+        margin-top: 0;
+        margin-bottom: 26vh;
+}
+}
 #school-image img {
     display: block;
     width: 100%;
