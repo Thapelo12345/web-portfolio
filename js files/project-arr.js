@@ -31,6 +31,13 @@ const arr = [
         link: "https://thapelo12345.github.io/form/",
         description: "I was coding a Figma-designed application form using HTML, CSS, and JavaScript. The design had a sleek layout with dynamic input validation. However, I faced a challenge with aligning form elements perfectly while keeping the responsiveness intact. The problem was that the input fields and labels would shift on smaller screens, breaking the design. To solve this, I used CSS Flexbox and media queries to ensure proper alignment across all devices. I also added JavaScript validation to enhance user experience."
 
+    },
+    {
+        title: "React-form",
+        picUrl: "pic/project-images/multi screens/react-form.png",
+        link: "https://thapelo12345.github.io/react-form/",
+        description: "I had to build a Figma-designed application form using React, HTML, CSS, and jQuery, I started by analyzing the Figma design to break it into reusable components. I created a React project and structured components for form fields, buttons, and validation messages. Using HTML and CSS, I ensured the layout matched the design, applying Flexbox and Grid for responsiveness. I used jQuery for additional UI enhancements, such as dynamic field validation and animations. Form data was managed using React state, and validation was handled using both jQuery and React’s built-in validation techniques. Finally, I tested for responsiveness and user experience."
+
     }
 
 ]
