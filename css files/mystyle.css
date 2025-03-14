@@ -307,7 +307,7 @@ main {
   position: absolute;
   top: -100%;
   left: 0;
-  background-image: url("./pic/mySelf.png");
+  background-image: url("../pic/mySelf.png");
   background-size: cover;
   background-position: center;
   width: 10vw;
