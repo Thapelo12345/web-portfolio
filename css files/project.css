@@ -369,7 +369,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("/pic/blue background.png");
+    background-image: url("../pic/blue background.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;

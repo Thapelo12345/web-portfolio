@@ -493,7 +493,7 @@ iframe {
   font-weight: 700;
   border: 2px solid var(--main-theme);
   padding: 1%;
-  transition-property: transform color, border;
+  transition-property: transform, color, border;
   transition-duration: 0.7s;
   border-radius: 15px;
   background: none;
