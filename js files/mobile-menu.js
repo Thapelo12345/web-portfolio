@@ -1,6 +1,5 @@
-const { transform } = require("framer-motion")
-
 var menuClicked = false
+
 function mobileMenu(){
     if(menuClicked){
         menuClicked = false
