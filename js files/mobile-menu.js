@@ -7,7 +7,8 @@ function mobileMenu(){
             transform: 'translateX(-150%)',
             zIndex: -1
         })
-        $("i").removeClass("bi-x-lg").addClass("bi-list");
+        // $("i").removeClass("bi-x-lg").addClass("bi-list");
+        $("#menu-btn-header").find("i").removeClass("bi-x-lg").addClass("bi-list")
     }
     else {
     menuClicked = true
@@ -15,7 +16,7 @@ function mobileMenu(){
         transform: 'translateX(0)',
         zIndex: 1
     })
-    $("i").removeClass("bi-list").addClass("bi-x-lg");
+    $("#menu-btn-header").find("i").removeClass("bi-list").addClass("bi-x-lg");
         
     }
 }//end of mobile menu
