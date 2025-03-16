@@ -1,292 +1,297 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');/* main header with fance container*/
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Serif+Text:ital@0;1&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');/*I am fonts */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"); /* main header with fance container*/
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Serif+Text:ital@0;1&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"); /*I am fonts */
 
-@font-face{
-    font-family: 'hi the';
-    src: url('/fonts/Kamryn 3D Italic D.otf');
+@font-face {
+  font-family: "hi the";
+  src: url("/fonts/Kamryn 3D Italic D.otf");
 }
 
-:root{
-    --themeBlue: hsl(210, 85%, 40%);
+:root {
+  --themeBlue: hsl(210, 85%, 40%);
 }
-*{box-sizing: border-box;}
-
-header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    margin: 1%;
-    width: 100vw;
-    height: 100vh;
-    min-height: 40px;
+* {
+  box-sizing: border-box;
 }
 
-@media only screen and (max-width: 903px){
-    header{
-        height: 85vh;
-    }
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 1%;
+  width: 100vw;
+  height: 100vh;
+  min-height: 40px;
 }
 
-@media only screen and (max-width: 405px){
-    header{
-        height: 60vh;
-    }
+@media only screen and (max-width: 903px) {
+  header {
+    height: 85vh;
+  }
+}
+
+@media only screen and (max-width: 405px) {
+  header {
+    height: 60vh;
+  }
 }
 
 #page-navigation {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    padding: .2%;
-    width: 30%;
-    min-width: 250px;
-    margin: .5%;
-    background-image: linear-gradient(140deg, hsl(100, 10%, 1%), rgb(32, 32, 32));
-    align-self: self-end;
-    border-radius: 5px;
-    box-shadow: 0 14px 14px black, 0 4px 9px var(--themeBlue), inset 0 0 4px var(--themeBlue);
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 0.2%;
+  width: 30%;
+  min-width: 250px;
+  margin: 0.5%;
+  margin-right: 3%;
+  background-image: linear-gradient(140deg, hsl(100, 10%, 1%), rgb(32, 32, 32));
+  align-self: self-end;
+  border-radius: 5px;
+  box-shadow: 0 14px 14px black, 0 4px 9px var(--themeBlue),
+    inset 0 0 4px var(--themeBlue);
 }
 
 #menu-btn-header {
-    position: fixed;
-    top: 2%;
-    left: 1%;
-    width: 10%;
-    height: 5%;
-    font-size: 1rem;
-    color: white;
-    background-color: hsl(0, 1%, 5%);
-    border: none;
-    z-index: 1;
+  position: fixed;
+  top: 2%;
+  left: 1%;
+  width: 10%;
+  height: 5%;
+  font-size: 1rem;
+  color: white;
+  background-color: hsl(0, 1%, 5%);
+  border: none;
+  z-index: 1;
 }
 
-@media only screen and (max-width: 671px){
-    #page-navigation {
-        position: fixed;
-        left: 14%;
-        top: 1.5%;
-        height: 5.5%;
-        padding: 2%;
-        transform: translateX(-150%);
-        box-shadow: none;
-        background-image: none;
-        background-color: hsl(0, 1%, 5%);
-        transition-property: width, transform;
-        transition-duration: .5s;
-        z-index: 1;
-        overflow: hidden;
-    }
-
- 
+@media only screen and (max-width: 671px) {
+  #page-navigation {
+    position: fixed;
+    left: 14%;
+    top: 1.5%;
+    height: 5.5%;
+    padding: 2%;
+    transform: translateX(-150%);
+    box-shadow: none;
+    background-image: none;
+    background-color: hsl(0, 1%, 5%);
+    transition-property: width, transform;
+    transition-duration: 0.5s;
+    z-index: 1;
+    margin-right: 0;
+    overflow: hidden;
+  }
 }
 
 @media screen and (min-width: 671px) {
-    #menu-btn-header {
-        display: none;
-    }
+  #menu-btn-header {
+    display: none;
+  }
 }
 
 #page-navigation button {
-    width: 26%;
-    padding: 1%;
-    margin: 1%;
-    color: white;
-    background: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  font-size: clamp(.75rem, 1vw, 1.4rem);
+  width: 26%;
+  padding: 1%;
+  margin: 1%;
+  color: white;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 671px){
-    #page-navigation button {
-        color: white;
-        word-spacing: 1cap;
-        font-weight: 400;
-    }
-    #page-navigation button:active {
-        text-decoration: underline;
-    }
+@media screen and (max-width: 671px) {
+  #page-navigation button {
+    color: white;
+    word-spacing: 1cap;
+    font-weight: 400;
+  }
+  #page-navigation button:active {
+    text-decoration: underline;
+  }
 }
 
 #image-discription {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    justify-content: space-evenly;
-    width: 90%;
-    height: 74%;
-    margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: space-evenly;
+  width: 90%;
+  height: 74%;
+  margin: 0;
 }
 
 #image-discription div {
-    padding: 0;
+  padding: 0;
 }
 
 #image-discription div:nth-child(1) {
-    height: 100%;
+  height: 100%;
 }
 
 #main-header-container {
-    display: flex;
-    height: 70vh;
-    width: 45%;
-    min-width: min(330px, 100%);
-    transform: perspective(1000px);
-    transform-style: preserve-3d;
-    animation: layBack linear;
-    animation-timeline: view();
-    animation-range: exit 1% cover;
+  display: flex;
+  height: 70vh;
+  width: 45%;
+  min-width: min(330px, 100%);
+  transform: perspective(1000px);
+  transform-style: preserve-3d;
+  animation: layBack linear;
+  animation-timeline: view();
+  animation-range: exit 1% cover;
 }
 
 @keyframes layBack {
-    to{
-        transform: rotateX(0deg) rotateY(-90deg);
-        text-shadow: 0 0 0 cadetblue,0 0 0 rgb(29, 31, 51);
-        opacity: 0.2;
-    }
+  to {
+    transform: rotateX(0deg) rotateY(-90deg);
+    text-shadow: 0 0 0 cadetblue, 0 0 0 rgb(29, 31, 51);
+    opacity: 0.2;
+  }
 }
 
 #image-discription div h1 {
-    align-self: center;
-    justify-self: center;
-    margin: 2%;
-    text-transform: uppercase;
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(0, 255, 255, 0.1);
-    font-size: clamp(2rem, 6vw, 5rem);
-    background-image: url('../pic/fish.svg');
-    background-repeat: repeat-x;
-    background-clip: text;
-    animation: waves 14s linear infinite;
-    background-position: left 0px top -40px;
+  align-self: center;
+  justify-self: center;
+  margin: 2%;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(0, 255, 255, 0.1);
+  font-size: clamp(2rem, 6vw, 5rem);
+  background-image: url("../pic/fish.svg");
+  background-repeat: repeat-x;
+  background-clip: text;
+  animation: waves 14s linear infinite;
+  background-position: left 0px top -40px;
 }
 
-@media only screen and (max-width: 768px){
-    #image-discription div h1 {
+@media only screen and (max-width: 768px) {
+  #image-discription div h1 {
     line-height: 1.4em;
     animation: smallerWaves 14s linear infinite;
-    }
+  }
 }
 @keyframes waves {
-    0%{
-        background-position: left 0px top 200px;
-    }
+  0% {
+    background-position: left 0px top 200px;
+  }
 
-    40%{
-        background-position: left 800px top 0px;
-    }
-    80%{
-        background-position: left 1800px top 0px;
-    }
+  40% {
+    background-position: left 800px top 0px;
+  }
+  80% {
+    background-position: left 1800px top 0px;
+  }
 
-    100%{
-        background-position: left 2400px top 200px;
-    }
-    
+  100% {
+    background-position: left 2400px top 200px;
+  }
 }
 
 @keyframes smallerWaves {
-    0%{
-        background-position: left 0px top -40px;
-    }
+  0% {
+    background-position: left 0px top -40px;
+  }
 
-    40%{
-        background-position: left 800px top 0px;
-    }
-    80%{
-        background-position: left 1800px top 0px;
-    }
+  40% {
+    background-position: left 800px top 0px;
+  }
+  80% {
+    background-position: left 1800px top 0px;
+  }
 
-    100%{
-        background-position: left 2400px top -40px;
-    }
-    
+  100% {
+    background-position: left 2400px top -40px;
+  }
 }
 
 #pic-container {
-    width: 25vw;
-    height: 25vw;
-    border-radius: 50%;
-    margin-top: 5%;
-    box-shadow: 1px 18px 10px black, 1px 10px 10px cadetblue, inset 0 0 10px var(--themeBlue);
-    transform: per spective(1000px) translateX(0) rotateY(0deg);
-    opacity: 1;
-    transform-style: preserve-3d;
-    animation: rotatePic linear;
-    animation-timeline: view();
-    animation-range: exit 1% cover;
+  width: 25vw;
+  height: 25vw;
+  border-radius: 50%;
+  margin-top: 5%;
+  box-shadow: 1px 18px 10px black, 1px 10px 10px cadetblue,
+    inset 0 0 10px var(--themeBlue);
+  transform: per spective(1000px) translateX(0) rotateY(0deg);
+  opacity: 1;
+  transform-style: preserve-3d;
+  animation: rotatePic linear;
+  animation-timeline: view();
+  animation-range: exit 1% cover;
 }
 
 @keyframes rotatePic {
-    to{
-        transform: translateX(180%) rotateY(110deg);
-        opacity: .6;
-    }
+  to {
+    transform: translateX(180%) rotateY(110deg);
+    opacity: 0.6;
+  }
 }
-@media only screen and (max-width: 903px){
-    #pic-container{display: none;}
+@media only screen and (max-width: 903px) {
+  #pic-container {
+    display: none;
+  }
 }
 
 #image-discription div img {
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
 }
 
-#main-header span{
-    text-decoration: underline;
-    text-shadow: none;
-    padding: 1%;
-    color: var(--themeBlue);
-    text-transform: lowercase;
-    font-family: 'hi the';
-    font-size: clamp(.3rem, 1.4rem, 2.2rem);
-    border-radius: 10px;
-    background: none;
-    background-clip: text;  
-    margin-bottom: 5%;  
-    box-shadow: 1px 6px 5px black, 0 5px 10px var(--themeBlue), inset 0 0 3px var(--themeBlue);
+#main-header span {
+  text-decoration: underline;
+  text-shadow: none;
+  padding: 1%;
+  color: var(--themeBlue);
+  text-transform: lowercase;
+  font-family: "hi the";
+  font-size: clamp(0.3rem, 1.4rem, 2.2rem);
+  border-radius: 10px;
+  background: none;
+  background-clip: text;
+  margin-bottom: 5%;
+  box-shadow: 1px 6px 5px black, 0 5px 10px var(--themeBlue),
+    inset 0 0 3px var(--themeBlue);
 }
 
 #link-nav {
-    display: flex;
-    flex-direction: row;
-    width: 20%;
-    min-width: 200px;
-    height: 6%;
-    margin-top: 2%;
-    margin-left: 2.5%;
-    justify-content: space-evenly;
-    align-self: self-start;
-    align-items: center;
-    animation: hide linear;
-    animation-timeline: view();
-    animation-range: entry 0 cover 150%;
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  min-width: 200px;
+  height: 6%;
+  margin-top: 2%;
+  margin-left: 2.5%;
+  justify-content: space-evenly;
+  align-self: self-start;
+  align-items: center;
+  animation: hide linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 150%;
 }
 
 @keyframes hide {
-    to{
-        transform: translateX(-180%);
-    }
+  to {
+    transform: translateX(-180%);
+  }
 }
 
-@media only screen and (max-width: 495px){
-    #link-nav {
-        margin-left: 25%;
-    }
+@media only screen and (max-width: 495px) {
+  #link-nav {
+    margin-left: 25%;
+  }
 }
 
 #link-nav a {
-    width: 10%;
-    height: 80%;
-    padding: 0;
-    margin: 0;
+  width: 10%;
+  height: 80%;
+  padding: 0;
+  margin: 0;
 }
 
-#link-nav a svg{
-    width: 100%;
-    height: 100%;
+#link-nav a svg {
+  width: 100%;
+  height: 100%;
 }
-

@@ -7,7 +7,6 @@ function mobileMenu(){
             transform: 'translateX(-150%)',
             zIndex: -1
         })
-        // $("i").removeClass("bi-x-lg").addClass("bi-list");
         $("#menu-btn-header").find("i").removeClass("bi-x-lg").addClass("bi-list")
     }
     else {

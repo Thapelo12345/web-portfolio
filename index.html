@@ -278,40 +278,40 @@
         </div>
       </div>
     </main>
+    <nav id="project-nav">
+      <div class="animate-btns">
+        <button
+          id="project-btn"
+          value="projects"
+          onclick="navigatePage(this.value)"
+          disabled
+        >
+          Projects
+        </button>
+      </div>
+
+      <div class="btn-holder">
+        <button
+          id="about-btn"
+          value="about me"
+          onclick="navigatePage(this.value)"
+        >
+          About Me
+        </button>
+      </div>
+
+      <div class="btn-holder">
+        <button
+          id="do-btn"
+          value="what i do"
+          onclick="navigatePage(this.value)"
+        >
+          What I do
+        </button>
+      </div>
+    </nav>
 
     <section id="projects">
-      <nav id="project-nav">
-        <div class="animate-btns">
-          <button
-            id="project-btn"
-            value="projects"
-            onclick="navigatePage(this.value)"
-            disabled
-          >
-            Projects
-          </button>
-        </div>
-
-        <div class="btn-holder">
-          <button
-            id="about-btn"
-            value="about me"
-            onclick="navigatePage(this.value)"
-          >
-            About Me
-          </button>
-        </div>
-
-        <div class="btn-holder">
-          <button
-            id="do-btn"
-            value="what i do"
-            onclick="navigatePage(this.value)"
-          >
-            What I do
-          </button>
-        </div>
-      </nav>
 
       <div id="slide-display">
         <!-- setting up the first page  -->
@@ -350,7 +350,6 @@
               <a
                 id="project-link-holder"
                 href="https://thapelo12345.github.io/demo-store/"
-                id="project-link"
                 target="_blank"
                 >Click Here</a
               >
@@ -429,50 +428,72 @@
           <h1 id="what-i-do">THIS IS WANT I CAN DO</h1>
 
           <div id="main-list">
-            <div class="min-paragraphs">
+
+            <div class="paragraph-cards">
+              <p>
+
+                Stay updated with emerging technologies and frameworks to improve
+                development workflows.
+              </p>
+              <div class="icon-images"></div>
+            </div>
+
+            <div class="paragraph-cards">
               <p>
                 Build robust back-end systems with server-side languages like
                 Node.js.
               </p>
-  
+              <div class="icon-images"></div>
+
+            </div>
+
+            <div class="paragraph-cards">
               <p>
                 Create and manage databases using tools like MongoDB, or
                 PostgreSQL to store and retrieve application data.
               </p>
-  
+              <div class="icon-images"></div>
+            </div>
+
+            <div class="paragraph-cards">
               <p>
                 Integrate APIs and third-party services to enhance application
                 functionality.
               </p>
-  
-              <p>Optimize website performance for speed and scalability.</p>
+              <div class="icon-images"></div>
             </div>
-  
-            <div class="min-paragraphs">
+
+            <div class="paragraph-cards">
+              <p>Optimize website performance for speed and scalability.</p>
+              <div class="icon-images"></div>
+            </div>
+
+            <div class="paragraph-cards">
               <p>
                 Implement user authentication, security protocols, and data
                 protection measures.
               </p>
-  
+              <div class="icon-images"></div>
+            </div>
+
+            <div class="paragraph-cards">
               <p>
                 Debug, test, and troubleshoot code to ensure smooth functionality
                 across all platforms.
               </p>
+              <div class="icon-images"></div>
+            </div>
+
+            <div class="paragraph-cards">
               <p>
                 Collaborate with designers, project managers, and other developers
                 to deliver complete web solutions.
               </p>
-  
-              <p>
-                Stay updated with emerging technologies and frameworks to improve
-                development workflows.
-              </p>
+              <div class="icon-images"></div>
             </div>
+  
           </div>
-<!-- 
-           -->
 
-          <!-- </div> -->
         </section>
         <!-- done setting third page -->
       </div>

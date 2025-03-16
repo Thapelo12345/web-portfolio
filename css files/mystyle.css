@@ -470,7 +470,7 @@ iframe {
   height: max-content;
   padding: 0.5%;
   border-radius: 5px;
-  margin-bottom: 1.5%;
+  /* margin-bottom: 1.5%; */
 }
 
 #phone {
