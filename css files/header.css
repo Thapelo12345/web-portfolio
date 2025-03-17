@@ -139,9 +139,14 @@ header {
   min-width: min(330px, 100%);
   transform: perspective(1000px);
   transform-style: preserve-3d;
-  animation: layBack linear;
-  animation-timeline: view();
-  animation-range: exit 1% cover;
+}
+
+@media screen and (min-width: 855px) {
+  #main-header-container {
+    animation: layBack linear;
+    animation-timeline: view();
+    animation-range: exit 1% cover;
+  }
 }
 
 @keyframes layBack {
@@ -214,12 +219,17 @@ header {
   margin-top: 5%;
   box-shadow: 1px 18px 10px black, 1px 10px 10px cadetblue,
     inset 0 0 10px var(--themeBlue);
-  transform: per spective(1000px) translateX(0) rotateY(0deg);
-  opacity: 1;
   transform-style: preserve-3d;
-  animation: rotatePic linear;
-  animation-timeline: view();
-  animation-range: exit 1% cover;
+}
+
+@media screen and (min-width: 855px) {
+  #pic-container {
+  transform: perspective(1000px) translateX(0) rotateY(0deg);
+    opacity: 1;
+    animation: rotatePic linear;
+    animation-timeline: view();
+    animation-range: exit 1% cover;
+  }
 }
 
 @keyframes rotatePic {
@@ -267,9 +277,15 @@ header {
   justify-content: space-evenly;
   align-self: self-start;
   align-items: center;
+  
+}
+
+@media screen and (min-width: 855px) {
+    #link-nav {
   animation: hide linear;
   animation-timeline: view();
   animation-range: entry 0 cover 150%;
+    }
 }
 
 @keyframes hide {
