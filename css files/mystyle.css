@@ -99,6 +99,13 @@ main {
   }
 }
 
+@media screen and (max-width:667px) and (max-height: 375px){
+  main {
+    height: 100vh;
+    margin-bottom: 10%;
+  }
+}
+
 #skill-label {
   position: relative;
   color: transparent;
@@ -436,6 +443,12 @@ footer {
   width: 100vw;
   margin: 0;
   padding: 1%;
+}
+
+@media screen and (max-width: 667px) and (max-height: 375px) {
+  footer {
+    margin-top: 10%;
+  }
 }
 
 #footer-header {
