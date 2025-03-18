@@ -62,7 +62,7 @@
 
 .btn-holder {
   height: 35%;
-  min-width: 60px;
+  min-width: 110px;
   border: none;
   border-radius: 10px;
   transition-duration: 0.5s;
@@ -77,11 +77,17 @@
     height: 28%;
   }
 }
+@media screen and (max-width: 554px) {
+  .btn-holder {
+  min-width: 60px;
+  }
+}
 
-.btn-holder > button {
+.btn-holder button {
   width: 100%;
   height: 100%;
   font-weight: 400;
+  font-size: clamp(.9rem, 1vw, 1rem);
   color: hsl(200, 50%, 90%);
   background: none;
   cursor: pointer;
