@@ -479,6 +479,7 @@
 
 #what-i-do {
   color: var(--main-theme);
+  text-align: center;
   text-shadow: 1px 0 0 whitesmoke;
   width: max-content;
   padding: 1.2%;
@@ -493,12 +494,12 @@
   font-variation-settings: "wdth" 100;
 }
 
-@media screen and (max-width: 838px) {
+/* @media screen and (max-width: 838px) {
   #what-i-do {
     align-self: normal;
     margin: 0 10%;
   }
-}
+} */
 
 #main-list {
   display: flex;
