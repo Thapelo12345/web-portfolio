@@ -109,9 +109,8 @@
 .animate-btns {
   position: relative;
   border: 1px solid aqua;
-  width: 20%;
-  min-width: 60px;
-  height: 40%;
+  height: 35%;
+  min-width: 110px;
   min-height: 20px;
   border-radius: 15px;
   transform-style: preserve-3d;
@@ -121,7 +120,7 @@
 
 @media screen and (max-width: 671px) {
   .animate-btns {
-    height: 20%;
+    height: 30%;
   }
 }
 
