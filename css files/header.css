@@ -24,7 +24,7 @@ header {
   min-height: 40px;
 }
 
-@media only screen and (max-width: 903px) {
+@media only screen and (max-width: 703px) {
   header {
     height: 85vh;
   }
