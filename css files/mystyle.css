@@ -89,7 +89,7 @@ main {
   -webkit-text-stroke: 1px var(--main-theme);
   word-spacing: -0.1em;
   text-align: center;
-  font-size: clamp(2.75rem, 4vw, 5rem);
+  font-size: clamp(1.75rem, 4vw, 5rem);
   font-family: "PT Serif", serif;
   font-weight: 700;
   font-style: normal;
@@ -143,9 +143,9 @@ main {
 #skill-board {
   position: absolute;
   left: 77%;
-  top: 10%;
+  top: 5%;
   width: 23%;
-  height: 74%;
+  height: 84%;
   background: none;
   border-radius: 10px;
   overflow: hidden;
@@ -186,7 +186,7 @@ main {
   list-style: none;
   width: 98%;
   height: 90%;
-  padding: 0;
+  padding: 1%;
 }
 
 #skill-board ul li {
@@ -194,7 +194,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 98%;
-  height: 4.5vh;
+  height: 8%;
   padding: 2%;
   margin: 2%;
   margin-bottom: 3%;
@@ -325,21 +325,20 @@ main {
 #slide::before {
   content: "";
   position: absolute;
-  top: -100%;
+  top: -50%;
   left: 0;
   background-image: url("../pic/mySelf.png");
   background-size: cover;
   background-position: center;
-  width: 10vw;
-  height: 10vw;
-  min-width: 100px;
-  min-height: 100px;
+  width: calc(10vw + 4vh);
+  height: calc(10vw + 4vh);
   border-radius: 50%;
   border: 0.1px solid cadetblue;
   box-shadow: inset 0 0 30px cadetblue;
   -webkit-box-reflect: below 1px
     linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
 }
+
 
 @keyframes rotateWheel {
   from {
@@ -354,27 +353,17 @@ main {
   position: absolute;
   display: block flex;
   flex-direction: column;
-  height: 16vh;
-  width: 4.5vw;
-  min-width: 40px;
+  width: calc(4.5vw + 2vh);
+  height: calc(4vw + 8vh);
+  min-height: 90px;
   background: none;
   inset: 0 0 0 0;
   transform: rotateY(
       calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
     )
-    translateZ(18rem);
+    translateZ(max(25vw, 50px));
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-}
-
-@media only screen and (max-width: 600px) {
-  .skill-container {
-    transform: rotateY(
-        calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
-      )
-      translateZ(9rem);
-    height: 10vh;
-  }
 }
 
 .skill-names {
@@ -403,11 +392,11 @@ main {
   height: 22%;
   width: 100%;
   overflow: hidden;
-  padding: 0;
+  padding: 1%;
   box-shadow: inset 0 0 17px var(--main-theme);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  -webkit-box-reflect: below 5px
+   -webkit-box-reflect: below 5px
     linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 }
 
