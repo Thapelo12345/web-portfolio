@@ -11,12 +11,7 @@ const arr = [
         link: "https://thapelo12345.github.io/demo-store/",
         description: "A React-based clothing store offers a seamless, interactive shopping experience with dynamic product displays, real-time updates, and smooth navigation. It features a modern design, responsive layout, and fast-loading pages. Customers can filter items, view detailed descriptions, and easily add products to their cart for a streamlined checkout process."
     },
-    {
-        title: "Chat App",
-        picUrl: "pic/project-images/multi screens/chat.png",
-        link: "https://chat-6o8u.onrender.com/",
-        description: "The simple chat app offers a seamless communication platform, enabling private and group chats with ease. Users can send messages securely in one-on-one conversations or join group chats to connect with multiple participants. The app features a user-friendly interface, instant messaging, and notifications to stay updated. It's perfect for both casual and professional use, ensuring fast, reliable communication. Stay connected anytime, anywhere, with this versatile chat solution."
-    },
+  
     {
         title: "Movie App",
         picUrl: "pic/project-images/multi screens/movies.png",
