@@ -361,7 +361,7 @@ main {
   transform: rotateY(
       calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
     )
-    translateZ(calc(20vw + 8vh));
+    translateZ(calc(20vw + 7vh));
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
