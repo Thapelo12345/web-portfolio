@@ -1,5 +1,4 @@
 function navigatePage(val){
-
 let crrElement;
 
 if(val === "projects"){

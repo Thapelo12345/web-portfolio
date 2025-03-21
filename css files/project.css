@@ -206,6 +206,7 @@
   overflow-y: auto;
 }
 
+
 /* setting up first page */
 #image-and-description {
   display: flex;
@@ -398,14 +399,14 @@
 #school-image {
   height: 90%;
   width: 25%;
-  min-width: 330px;
+  min-width: 310px;
   border-radius: 15px;
 }
 
 @media only screen and (max-width: 722px) {
   #school-image {
     height: 30%;
-    min-width: 80px;
+    min-width: 60px;
     margin-top: 0;
     margin-bottom: 2%;
     border-radius: 5px;
@@ -426,14 +427,15 @@
   flex-direction: column;
   align-items: center;
   height: 100%;
-  width: 70%;
+  width: 50%;
   min-width: min(500px, 100%);
-  padding: 2%;
+  padding-right: 7%;
   overflow: auto;
 }
 
 #about-paragraphs p {
   color: white;
+  padding: 2%;
   word-spacing: 0.1cap;
   font-size: clamp(0.6rem, 1vw, 1rem);
   font-weight: 700;
