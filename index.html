@@ -3,533 +3,370 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thapelo Petrick Sikhosana's Portfolio</title>
+    <title>Thapelo Sikhosana | Web Developer</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-    <link rel="stylesheet" href="css files/header.css" />
-    <link rel="stylesheet" href="css files/mystyle.css" />
-    <link rel="stylesheet" href="css files/project.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="styles/main.css">
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-      crossorigin="anonymous"
-    ></script>
-
-    <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js files/project-arr.js"></script>
-    <script type="text/javascript" src="js files/projects.js" defer></script>
-    <script type="text/javascript" src="js files/sideBar-functions.js"></script>
-    <script src="js files/projects.js" type="module" defer></script>
-    <script type="text/javascript" src="js files/mobile-menu.js"></script>
-    <script src="js files/paragraphs.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> 
+    <script type ="module" src="js files/animation.js"></script>
+ 
   </head>
-
   <body>
-    <nav id="fixed-nav">
-      <button onclick="navigation('header')">
-        <i class="bi bi-house-door"></i>
-        <span>Home</span>
-      </button>
+    <!-- Header -->
+    <header>
+      <a href="#" class="logo">Thapelo<span>Sikhosana</span></a>
 
-      <button onclick="navigation('main')">
-        <i class="bi bi-tools"></i>
-        <span>skills</span>
-      </button>
-
-      <button onclick="navigation('projects')">
-        <i class="bi bi-gear"></i>
-        <span>projects</span>
-      </button>
-
-      <button onclick="navigation('footer')">
-        <i class="bi bi-file-person"></i>
-        <span>Contact</span>
-      </button>
-    </nav>
-
-    <header id="header">
-      <button id="menu-btn-header" onclick="mobileMenu()"><i class="bi bi-list"></i></button>
-      <nav id="page-navigation">
-        <button onclick="navigation('header')">Home</button>
-
-        <button onclick="navigation('main')">Skill</button>
-
-        <button onclick="navigation('projects')">Project</button>
-
-        <button onclick="navigation('footer')">Contacts</button>
+      <nav class="nav-links">
+        <a href="#home" class="active" style="--i: 1">Home</a>
+        <a href="#about" style="--i: 2">About</a>
+        <a href="#services" style="--i: 3">Services</a>
+        <a href="#portfolio" style="--i: 4">Projects</a>
+        <a href="#contact" style="--i: 5">Contact</a>
       </nav>
 
-      <div id="image-discription">
-        <div id="main-header-container">
-          <h1 id="main-header">
-            <span>Hi the, I am a</span> <br />
-            front end web developer
-          </h1>
-        </div>
+      <button class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-moon"></i>
+      </button>
 
-        <div id="pic-container"><img src="pic/mySelf.png" alt="MySelf" /></div>
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
       </div>
-
-      <nav id="link-nav">
-        <a href="https://www.facebook.com/mighty.thapz" target="_blank">
-          <svg fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-            <path
-              d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
-            />
-          </svg>
-        </a>
-
-        <a href="https://github.com/Thapelo12345" target="_blank">
-          <svg fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-            <path
-              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
-            />
-          </svg>
-        </a>
-
-        <a href="https://www.linkedin.com/in/petrick-sikhosana-336510119" target="_blank">
-          <svg fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-            <path
-              d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
-            />
-          </svg>
-        </a>
-      </nav>
     </header>
 
-    <main id="main">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>Hi, I'm <span>Thapelo Sikhosana</span></h1>
+        <h3><span>Web Developer</span></h3>
+        <p>
+          I'm a passionate web developer specializing in creating modern,
+          responsive websites and web applications. With expertise in
+          JavaScript, React, Node.js, and more, I build digital experiences that
+          are both beautiful and functional.
+        </p>
 
-      <div id="skill-board">
-        <h1>SKILL BOARD</h1>
-        <ul>
-          
-          <li>
-            <h2 class="border-skill-name">HTML &nbsp; &nbsp;<span> 100%</span></h2>
-            <div class="slider"></div>
-          </li>
+        <div class="btn-box">
+          <a href="#contact">Hire Me</a>
+          <a href="#about">About Me</a>
+        </div>
 
-          <li>
-            <h2 class="border-skill-name">CSS &nbsp; &nbsp;<span> 90%</span></h2>
-            <div class="slider"></div>
-          </li>
+        <div class="social-icons">
+          <a href="https://github.com/Thapelo12345" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/petrick-sikhosana-336510119" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com/mighty.thapz" target="_blank"><i class="fab fa-facebook"></i></a>
 
-          <li>
-            <h2 class="border-skill-name">JAVASCRIPT &nbsp; &nbsp;<span> 95%</span></h2>
-            <div class="slider"></div>
-          </li>
-
-          <li>
-            <h2 class="border-skill-name">POSTGRES-SQL &nbsp; &nbsp;<span> 50%</span></h2>
-            <div class="slider"></div>
-          </li>
-
-          <li>
-            <h2 class="border-skill-name">JQUERY &nbsp; &nbsp;<span> 80%</span></h2>
-            <div class="slider"></div>
-          </li>
-
-          <li>
-            <h2 class="border-skill-name">NODE JS &nbsp; &nbsp;<span> 60%</span></h2>
-            <div class="slider"></div>
-          </li>
-
-          <li>
-            <h2 class="border-skill-name">C SHARP &nbsp; &nbsp;<span> 60%</span></h2>
-            <div class="slider"></div>
-          </li>
-
-          <li>
-            <h2 class="border-skill-name">PYTHON &nbsp; &nbsp;<span> 30%</span></h2>
-            <div class="slider"></div>
-          </li>
-
-          <li>
-            <h2 class="border-skill-name">REACT &nbsp; &nbsp;<span> 70%</span></h2>
-            <div class="slider"></div>
-          </li>
-
-        </ul>
+        </div>
       </div>
 
-      <h1 id="skill-label" data-text="SKILL LEVEL">SKILL LEVEL</h1>
+      <div class="hero-img">
+        <img
+          src="pic/mySelf1.png"
+          alt="Thapelo Sikhosana"
+        />
+      </div>
+    </section>
 
-      <div id="image-container">
-        <div id="slide" style="--quantity: 9">
-          <div class="skill-container" style="--position: 1">
-            <h1 class="skill-names">C Sharp</h1>
-            <img
-              class="icon"
-              src="pic/icon-images/c-sharp.png"
-              alt="skill image"
-            />
+    <!-- About Section -->
+    <section class="about" id="about">
+      <h2>About <span>Me</span></h2>
 
-            <div class="percentage-container">
-              <h6 class="percentage-display">60%</h6>
+      <div class="about-content">
+        <div class="about-img">
+          <img
+            src="pic/school.jpg"
+            alt="Thapelo Sikhosana"
+          />
+        </div>
+
+        <div class="about-text">
+          <h3>Web Developer</h3>
+          <p>
+            I'm Thapelo Petrick Sikhosana, a dedicated web developer with a
+            passion for creating innovative digital solutions. With years of
+            experience in the industry, I've honed my skills in both front-end
+            and back-end development to deliver comprehensive web solutions.
+          </p>
+          <p>
+            My approach combines technical expertise with creative
+            problem-solving to build websites and applications that not only
+            look great but also perform exceptionally well across all devices
+            and platforms.
+          </p>
+
+          <div class="skills">
+            <h4>My Skills</h4>
+            <div class="skill-container">
+                
+            <div class="skill-item">
+                <span class="skill">JavaScript</span>
+                <i class="fab fa-js skill-icon"></i>
             </div>
-          </div>
-
-          <div class="skill-container" style="--position: 2">
-            <h1 class="skill-names">CSS</h1>
-            <img class="icon" src="pic/icon-images/CSS.png" alt="skill image" />
-
-            <div class="percentage-container">
-              <h6 class="percentage-display">90%</h6>
+            
+            <div class="skill-item">
+                <span class="skill">HTML5</span>
+                <i class="fab fa-html5 skill-icon"></i>
             </div>
-          </div>
-
-          <div class="skill-container" style="--position: 3">
-            <h1 class="skill-names">HTML</h1>
-            <img
-              class="icon"
-              src="pic/icon-images/html.png"
-              alt="skill image"
-            />
-
-            <div class="percentage-container">
-              <h6 class="percentage-display">100%</h6>
+            
+            <div class="skill-item">
+                <span class="skill">CSS3</span>
+                <i class="fab fa-css3-alt skill-icon"></i>
             </div>
-          </div>
-
-          <div class="skill-container" style="--position: 4">
-            <h1 class="skill-names">JAVASCRIPT</h1>
-            <img
-              class="icon"
-              src="pic/icon-images/javascript.png"
-              alt="skill image"
-            />
-
-            <div class="percentage-container">
-              <h6 class="percentage-display">95%</h6>
+        
+            <div class="skill-item">
+                <span class="skill">React</span>
+                <i class="fab fa-react skill-icon"></i>
             </div>
-          </div>
-
-          <div class="skill-container" style="--position: 5">
-            <h1 class="skill-names">JQUERY</h1>
-            <img
-              class="icon"
-              src="pic/icon-images/jquery.png"
-              alt="skill image"
-            />
-
-            <div class="percentage-container">
-              <h6 class="percentage-display">80%</h6>
+            
+            <div class="skill-item">
+                <span class="skill">Native</span>
+                <i class="fab fa-react skill-icon"></i>
             </div>
-          </div>
-
-          <div class="skill-container" style="--position: 6">
-            <h1 class="skill-names">NODE</h1>
-            <img
-              class="icon"
-              src="pic/icon-images/node.png"
-              alt="skill image"
-            />
-
-            <div class="percentage-container">
-              <h6 class="percentage-display">60%</h6>
+          
+            <div class="skill-item">
+                <span class="skill">Node.js</span>
+                <i class="fab fa-node-js skill-icon"></i>
             </div>
-          </div>
 
-          <div class="skill-container" style="--position: 7">
-            <h1 class="skill-names">POSTGRES</h1>
-            <img
-              class="icon"
-              src="pic/icon-images/postgres.png"
-              alt="skill image"
-            />
-
-            <div class="percentage-container">
-              <h6 class="percentage-display">50%</h6>
+            <div class="skill-item">
+                <span class="skill">jQuery</span>
+                <i class="fas fa-code skill-icon"></i>
             </div>
-          </div>
 
-          <div class="skill-container" style="--position: 8">
-            <h1 class="skill-names">PYTHON</h1>
-            <img
-              class="icon"
-              src="pic/icon-images/Python.png"
-              alt="skill image"
-            />
-
-            <div class="percentage-container">
-              <h6 class="percentage-display">30%</h6>
+            <div class="skill-item">
+                <span class="skill">Express</span>
+                <i class="fas fa-server skill-icon"></i>
             </div>
-          </div>
 
-          <div class="skill-container" style="--position: 9">
-            <h1 class="skill-names">REACT</h1>
-            <img
-              class="icon"
-              src="pic/icon-images/react.png"
-              alt="skill image"
-            />
-
-            <div class="percentage-container">
-              <h6 class="percentage-display">70%</h6>
             </div>
           </div>
         </div>
       </div>
-    </main>
-
-    <nav id="project-nav">
-      <div class="animate-btns">
-        <button
-          id="project-btn"
-          value="projects"
-          onclick="navigatePage(this.value)"
-          disabled
-        >
-          Projects
-        </button>
-      </div>
-
-      <div class="btn-holder">
-        <button
-          id="about-btn"
-          value="about me"
-          onclick="navigatePage(this.value)"
-        >
-          About Me
-        </button>
-      </div>
-
-      <div class="btn-holder">
-        <button
-          id="do-btn"
-          value="what i do"
-          onclick="navigatePage(this.value)"
-        >
-          What I do
-        </button>
-      </div>
-    </nav>
-
-    <section id="projects">
-
-      <div id="slide-display">
-        <!-- setting up the first page  -->
-        <section class="pages">
-
-          <div id="image-and-description">
-            <div id="project-image-container">
-
-              <div id="project-name-container">
-                <h1 id="project-name" data-text="React Store ">React Store</h1>
-              </div>
-
-              <img 
-                id="project-image"
-                src="pic/project-images/multi screens/store.png"
-                alt=""
-              />
-
-              <div id="eraser"></div>
-              <div id="draw"></div>
-            </div>
-            
-            <p id="project-description">
-              A React-based clothing store offers a seamless, interactive
-              shopping experience with dynamic product displays, real-time
-              updates, and smooth navigation. It features a modern design,
-              responsive layout, and fast-loading pages. Customers can filter
-              items, view detailed descriptions, and easily add products to
-              their cart for a streamlined checkout process.
-            </p>
-          </div>
-
-          <div id="project-link">
-            <h3 id="project-link-text">
-              Go to Project
-              <a
-                id="project-link-holder"
-                href="https://thapelo12345.github.io/demo-store/"
-                target="_blank"
-                >Click Here</a
-              >
-            </h3>
-          </div>
-
-          <div id="browse-btns">
-
-            <button
-            class="navigation-btns"
-            value="next"
-            onclick="insertProject(this.value)"
-          ><</button>
-          <button
-            class="navigation-btns"
-            value="back"
-            onclick="insertProject(this.value)"
-          >
-            >
-          </button>
-          </div>
-
-        </section>
-
-        <!-- setting up the second page -->
-        <section class="pages">
-
-          <div id="about-container">
-            <div id="school-image">
-              <img src="pic/school.jpg" alt="me at school">
-            </div>
-
-            <div id="about-paragraphs">
-              <p>
-                I am Thapelo Petrick Sikhosana, a 34-year-old full-stack web developer
-                with a passion for building dynamic, user-centric web applications. I
-                completed my matric in 2010, a milestone that marked the beginning of
-                my academic and personal growth. Since then, I’ve been dedicated to
-                expanding my knowledge and skills in technology.
-              </p>
-              <p>
-                In 2015, I began exploring web development through FreeCodeCamp, a
-                platform that has profoundly shaped my career. These courses
-                introduced me to essential programming concepts, laying the foundation
-                for my expertise in both front-end and back-end technologies. My
-                commitment to self-learning has enabled me to continuously improve and
-                keep pace with industry trends.
-              </p>
-              <p>
-                As a full-stack developer, I specialize in designing and implementing
-                robust web applications that offer seamless user experiences. On the
-                front end, I leverage my skills in HTML, CSS, JavaScript, and React to
-                create responsive and visually appealing interfaces. On the back end,
-                I work with technologies like Node.js, Express, and databases such as
-                MongoDB or SQL to ensure efficient functionality and secure data
-                management. My ability to integrate front-end and back-end systems
-                allows me to deliver comprehensive, end-to-end solutions.
-              </p>
-              <p>
-                Beyond coding, I am passionate about problem-solving and thrive in
-                collaborative environments where I can contribute to shared goals. My
-                journey reflects resilience, adaptability, and a deep love for
-                learning. Whether working on individual projects or as part of a team,
-                I strive to deliver high-quality work that meets and exceeds
-                expectations.
-              </p>
-
-            </div>
-          </div>
-  
-        </section>
-        <!-- done setting the second page -->
-
-        <!-- setting the third page -->
-        <section class="pages">
-          <h1 id="what-i-do">THIS IS WANT I CAN DO</h1>
-
-          <div id="main-list">
-
-            <div class="paragraph-cards">
-              <p>
-                Stay updated with emerging technologies and frameworks to improve
-                development workflows.
-              </p>
-              <div class="inner-background"></div>
-            </div>
-
-            <div class="paragraph-cards">
-              <p>
-                Build robust back-end systems with server-side languages like
-                Node.js.
-              </p>
-              <div class="inner-background"></div>
-
-            </div>
-
-            <div class="paragraph-cards">
-              <p>
-                Create and manage databases using tools like MongoDB, or
-                PostgreSQL to store and retrieve application data.
-              </p>
-              <div class="inner-background"></div>
-            </div>
-
-            <div class="paragraph-cards">
-              <p>
-                Integrate APIs and third-party services to enhance application
-                functionality.
-              </p>
-              <div class="inner-background"></div>
-            </div>
-
-            <div class="paragraph-cards">
-              <p>Optimize website performance for speed and scalability.</p>
-              <div class="inner-background"></div>
-            </div>
-
-            <div class="paragraph-cards">
-              <p>
-                Implement user authentication, security protocols, and data
-                protection measures.
-              </p>
-              <div class="inner-background"></div>
-            </div>
-
-            <div class="paragraph-cards">
-              <p>
-                Debug, test, and troubleshoot code to ensure smooth functionality
-                across all platforms.
-              </p>
-              <div class="inner-background"></div>
-            </div>
-
-            <div class="paragraph-cards">
-              <p>
-                Collaborate with designers, project managers, and other developers
-                to deliver complete web solutions.
-              </p>
-              <div class="inner-background"></div>
-            </div>
-  
-          </div>
-
-        </section>
-        <!-- done setting third page -->
-      </div>
-
     </section>
- 
-    <footer id="footer">
-      <h1 id="footer-header"><u>Contact</u></h1>
-<div id="footer-details">
 
-  <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.8392632642317!2d28.238535074328734!3d-26.104165159905193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9514fa9fa3180f%3A0x5869d394648d7132!2s69%20Maxwell%20St%2C%20Kempton%20Park%2C%201620!5e0!3m2!1sen!2sza!4v1738599327541!5m2!1sen!2sza"
-      style="border: 0"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <h2>My <span>Services</span></h2>
 
-    <div id="details">
-        <h1 id="phone">
-          <i class="bi bi-envelope-at"></i> Tel: <span>063 893 7422</span>
-        </h1>
-        <h1 id="email">
-          <i class="bi bi-telephone"></i> Email:
-          <span>pmanskhosana@gmail.com</span>
-        </h1>
+      <div class="services-container">
+        <div class="service-card">
+          <i class="fas fa-code"></i>
+          <h3>Web Development</h3>
+          <p>
+            Custom website development tailored to your specific needs, built
+            with clean, efficient code and responsive design principles.
+          </p>
+        </div>
 
-        <button id="download-btn">
-          <a href="empty resume.pdf" target="_blank">
-          Download Resume  <i class="bi bi-download"></i>
-          </a>
-        </button>
-</div>
-      
+        <div class="service-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Mobile Development</h3>
+          <p>
+            Cross-platform mobile applications using React Native, delivering
+            native-like performance with a single codebase.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-paint-brush"></i>
+          <h3>UI/UX Design</h3>
+          <p>
+            Beautiful, intuitive user interfaces designed with the latest UX
+            principles to maximize engagement and conversions.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-server"></i>
+          <h3>Backend Development</h3>
+          <p>
+            Robust server-side solutions with Node.js and Express, ensuring your
+            applications are fast, secure, and scalable.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-search"></i>
+          <h3>SEO Optimization</h3>
+          <p>
+            Technical SEO implementation to help your website rank higher in
+            search results and reach more potential customers.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-tools"></i>
+          <h3>Maintenance</h3>
+          <p>
+            Ongoing support and maintenance to keep your website running
+            smoothly with the latest updates and security patches.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+      <h2>My <span>Projects</span></h2>
+
+      <div id="projects-holder" class="portfolio-container">
+        
+        <div class="portfolio-item">
+          <img src="pic/projects/react store.png" alt="Project 1" />
+          <div class="portfolio-overlay">
+            <h3>React Store</h3>
+            <p>
+              A React-based clothing store with dynamic displays, real-time updates, and smooth navigation. It offers a modern design, responsive layout, fast loading, product filtering, and easy checkout.
+            </p>
+            <a href="https://thapelo12345.github.io/demo-store/" target="_blank">View Project</a>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <img src="pic/projects/react form.png" alt="Project 2" />
+          <div class="portfolio-overlay">
+            <h3>React Form</h3>
+            <p>
+              Built a Figma-designed form in React, HTML, CSS, and jQuery.
+               Broke the design into reusable components, ensuring responsiveness with Flexbox and Grid.
+                Used jQuery for UI enhancements, dynamic validation, and animations.
+                 Managed form data with React state and validated using React and jQuery.
+                  Tested for responsiveness and UX.
+            </p>
+            <a href="https://thapelo12345.github.io/react-form/" target="_blank">View Project</a>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <img src="pic/projects/dessert.png" alt="Project 3" />
+          <div class="portfolio-overlay">
+            <h3>Dessert App</h3>
+            <p>
+              I built a dessert app from a Figma design using HTML, CSS, and JavaScript, ensuring a responsive, pixel-perfect experience.
+               I structured the layout with semantic HTML, used Flexbox and Grid for adaptability, and added interactivity with JavaScript.
+                I optimized performance with lazy loading and tested across devices for usability.
+            </p>
+            <a href="https://thapelo12345.github.io/dessert/" target="_blank">View Project</a>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <img src="pic/projects/form.png" alt="Project 4" />
+          <div class="portfolio-overlay">
+            <h3>Applicatio Form</h3>
+            <p>
+              I coded a Figma-designed form with HTML, CSS, and JavaScript.
+               I used Flexbox and media queries to fix alignment issues on smaller screens, and added JavaScript validation for better user experience.
+            </p>
+            <a href="https://thapelo12345.github.io/form/" target="_blank">View Project</a>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <img src="pic/projects/movie app.png" alt="Project 5" />
+          <div class="portfolio-overlay">
+            <h3>Movie app</h3>
+            <p>
+              I built an app using React and an API hosted on Render to fetch and display movie details like length,
+               genres, and descriptions.
+            </p>
+            <a href="https://thapelo12345.github.io/movie-app/" target="_blank">View Project</a>
+          </div>
+        </div>
+            
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <h2>Contact <span>Me</span></h2>
+
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+
+          <div class="contact-details">
+            <div class="contact-detail">
+              <i class="fas fa-envelope"></i>
+              <span>pmanskhosana@gmail.com</span>
+            </div>
+
+            <div class="contact-detail">
+              <i class="fas fa-phone"></i>
+              <span>+27 638 937 422</span>
+            </div>
+
+            <div class="contact-detail">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Johannesburg, South Africa</span>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="https://github.com/Thapelo12345" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/petrick-sikhosana-336510119" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/mighty.thapz" target="_blank"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3>Send a Message</h3>
+
+          <form>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="Your Name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" placeholder="Subject" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2023 Thapelo Sikhosana. All Rights Reserved.</p>
+
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
     </footer>
 
+    <!-- <script>
+ 
+    </script> -->
   </body>
 </html>
